@@ -243,15 +243,23 @@ static const Key keys[] = {
 
     { MODKEY|ControlMask|ShiftMask,     XK_d,       defaultgaps,    {0} },
 
-    // layout
-    { MODKEY,                           XK_t,       setlayout,      {.v = &layouts[0]} },
-    { MODKEY|ShiftMask,                 XK_f,       setlayout,      {.v = &layouts[1]} },
-    { MODKEY,                           XK_m,       setlayout,      {.v = &layouts[2]} },
-    { MODKEY|ControlMask,               XK_g,       setlayout,      {.v = &layouts[10]} },
-    { MODKEY|ControlMask|ShiftMask,     XK_t,       setlayout,      {.v = &layouts[13]} },
+    // layout (preferences = no 1,3,4,8,9)
+    { MODKEY|ControlMask,               XK_F1,       setlayout,      {.v = &layouts[0]} },
+    { MODKEY|ControlMask,               XK_F2,       setlayout,      {.v = &layouts[2]} },
+    { MODKEY|ControlMask,               XK_F3,       setlayout,      {.v = &layouts[5]} },
+    { MODKEY|ControlMask,               XK_F4,       setlayout,      {.v = &layouts[6]} },
+    { MODKEY|ControlMask,               XK_F5,       setlayout,      {.v = &layouts[7]} },
+    { MODKEY|ControlMask,               XK_F6,       setlayout,      {.v = &layouts[11]} },
+    { MODKEY|ControlMask,               XK_F7,       setlayout,      {.v = &layouts[0]} },
+    { MODKEY|ControlMask,               XK_F8,       setlayout,      {.v = &layouts[0]} },
+    { MODKEY|ControlMask,               XK_F9,       setlayout,      {.v = &layouts[0]} },
+    { MODKEY|ControlMask,               XK_F10,      setlayout,      {.v = &layouts[0]} },
+    { MODKEY|ControlMask,               XK_F11,      setlayout,      {.v = &layouts[0]} },
+    { MODKEY|ControlMask,               XK_F12,      setlayout,      {.v = &layouts[0]} },
+
     { MODKEY,                           XK_space,   setlayout,      {0} },
-    { MODKEY|ControlMask,               XK_comma,   cyclelayout,    {.i = -1 } },
-    { MODKEY|ControlMask,               XK_period,  cyclelayout,    {.i = +1 } },
+    { MODKEY|ControlMask,               XK_p,       cyclelayout,    {.i = -1 } },
+    { MODKEY|ControlMask,               XK_m,       cyclelayout,    {.i = +1 } },
     { MODKEY,                           XK_0,       view,           {.ui = ~0 } },
     { MODKEY|ShiftMask,                 XK_0,       tag,            {.ui = ~0 } },
     { MODKEY,                           XK_comma,   focusmon,       {.i = -1 } },
