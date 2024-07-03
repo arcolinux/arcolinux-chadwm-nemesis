@@ -33,20 +33,3 @@ Summary
 .c: Source files with C code implementation.
 .o: Object files with compiled machine code.
 .1: Man pages for user command documentation.
-
-
-To be found in /usr/include/ and its subdirs
-
-#include <X11/Xatom.h>
-#include <X11/Xlib.h>
-#include <X11/Xproto.h>
-#include <X11/Xutil.h>
-#include <X11/cursorfont.h>
-#include <X11/keysym.h>
-#include <locale.h>
-...
-#include <sys/wait.h>
-
-These are local custom headers files part of the folder arco-chadwm/chadwm
-#include "drw.h"   - drawing
-#include "util.h"  - utility

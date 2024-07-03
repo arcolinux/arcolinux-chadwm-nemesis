@@ -53,7 +53,7 @@ static const char *colors[][3]      = {
     /*                     fg       bg      border */
     [SchemeNorm]       = { gray3,   black,  gray2 },
     [SchemeSel]        = { gray4,   blue,   blue  },
-    [SchemeTitle]      = { white,   black,  black  }, // active window title
+    [SchemeTitle]      = { white,   black,  black }, // active window title
     [TabSel]           = { blue,    gray2,  black },
     [TabNorm]          = { gray3,   black,  black },
     [SchemeTag]        = { gray3,   black,  black },
@@ -71,13 +71,13 @@ static const char *colors[][3]      = {
     [SchemeBtnPrev]    = { green,   black,  black },
     [SchemeBtnNext]    = { yellow,  black,  black },
     [SchemeBtnClose]   = { red,     black,  black },
-    [SchemeLayoutFF]   = { orange,   black,  black },
-    [SchemeLayoutEW]   = { blue,   black,  black },
-    [SchemeLayoutDS]   = { red,   black,  black },
+    [SchemeLayoutFF]   = { orange,  black,  black },
+    [SchemeLayoutEW]   = { blue,    black,  black },
+    [SchemeLayoutDS]   = { red,     black,  black },
     [SchemeLayoutTG]   = { green,   black,  black },
     [SchemeLayoutMS]   = { pinky,   black,  black },
-    [SchemeLayoutPC]   = { orange,   black,  black },
-    [SchemeLayoutVV]   = { blue,   black,  black },
+    [SchemeLayoutPC]   = { orange,  black,  black },
+    [SchemeLayoutVV]   = { blue,    black,  black },
 };
 
 /* tagging */
@@ -178,8 +178,8 @@ static const Key keys[] = {
     {0,             XF86XK_AudioLowerVolume,    spawn, {.v = downvol}},
 	{0,             XF86XK_AudioMute, spawn,    {.v = mutevol }},
 	{0,             XF86XK_AudioRaiseVolume,    spawn, {.v = upvol}},
-	{0,				XF86XK_MonBrightnessUp,		spawn,	{.v = light_up}},
-	{0,				XF86XK_MonBrightnessDown,	spawn,	{.v = light_down}},
+	{0,				XF86XK_MonBrightnessUp,     spawn,	{.v = light_up}},
+	{0,				XF86XK_MonBrightnessDown,   spawn,	{.v = light_down}},
 
     // screenshot fullscreen and cropped
     {MODKEY|ControlMask,                XK_u,       spawn,
