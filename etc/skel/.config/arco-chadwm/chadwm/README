@@ -47,6 +47,6 @@ To be found in /usr/include/ and its subdirs
 ...
 #include <sys/wait.h>
 
-These are local custom headers files part of arco-chadwm
+These are local custom headers files part of the folder arco-chadwm/chadwm
 #include "drw.h"   - drawing
 #include "util.h"  - utility
