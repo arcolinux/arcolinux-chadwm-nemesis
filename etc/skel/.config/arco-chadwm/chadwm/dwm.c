@@ -598,7 +598,6 @@ void arrangemon(Monitor *m) {
   XMoveResizeWindow(dpy, m->tabwin, m->wx + m->gappov, m->ty, m->ww - 2 * m->gappov, th);
   XMoveWindow(dpy, m->tagwin, m->wx + m->gappov, m->by + (m->topbar ? (bh + m->gappoh) : (- (m->mh / scalepreview) - m->gappoh)));
   snprintf(m->ltsymbol, sizeof(m->ltsymbol), "%s", m->lt[m->sellt]->symbol);
-
   if (m->lt[m->sellt]->arrange)
     m->lt[m->sellt]->arrange(m);
 }
