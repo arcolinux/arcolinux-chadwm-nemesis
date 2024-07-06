@@ -278,6 +278,7 @@ static const Key keys[] = {
     // kill window
     { MODKEY,                           XK_q,       killclient,     {0} },
     { MODKEY|ShiftMask,                 XK_q,       killclient,     {0} },
+    { MODKEY|ShiftMask,                 XK_c,       killclient,     {0} },
 
     // restart
     { MODKEY|ShiftMask,                 XK_r,       restart,           {0} },
