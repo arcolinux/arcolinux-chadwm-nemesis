@@ -78,6 +78,10 @@ super + x
 super + shift + x
     arcolinux-powermenu
 
+#nlogout
+alt + shift + x
+    nlogout
+
 #Rofi theme selector
 super + r
     rofi-theme-selector
