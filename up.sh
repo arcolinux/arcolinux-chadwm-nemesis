@@ -27,8 +27,6 @@
 #tput setaf 8 = light blue
 ##################################################################################################################
 
-installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
-
 # reset - commit your changes or stash them before you merge
 # git reset --hard - personal alias - grh
 
@@ -37,6 +35,7 @@ echo "Checking for newer files online first"
 git pull
 
 echo "getting picom.conf"
+installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
 found_file=$(find "$installed_dir" -type f -name "picom.conf" | head -n 1)
 wget -v https://raw.githubusercontent.com/arconetpro/picom/refs/heads/main/picom.conf -O $found_file 
 
