@@ -27,12 +27,20 @@
 #tput setaf 8 = light blue
 ##################################################################################################################
 
+installed_dir=$(dirname $(readlink -f $(basename `pwd`)))
+
 # reset - commit your changes or stash them before you merge
 # git reset --hard - personal alias - grh
 
 # checking if I have the latest files from github
 echo "Checking for newer files online first"
 git pull
+
+# setting the ArcoLinux picom configuration
+echo "getting latest picom config from github"
+destination="$installed_dir/etc/skel/.config/arco-chadwm/picom/picom.conf"
+wget -v https://raw.githubusercontent.com/arconetpro/picom/refs/heads/main/picom.conf -O $destination 
+
 
 # Below command will backup everything inside the project folder
 git add --all .
