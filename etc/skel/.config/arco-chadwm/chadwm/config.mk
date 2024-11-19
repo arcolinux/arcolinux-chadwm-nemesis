@@ -8,10 +8,10 @@ PREFIX = /usr/local
 MANPREFIX = ${PREFIX}/share/man
 
 # X11 include directory
-X11INC = /usr/include/X11
+X11INC = /usr/include/
 
 # X11 library directory
-X11LIB = /usr/lib/X11
+X11LIB = /usr/lib/
 
 # Xinerama, comment if you don't want it
 XINERAMALIBS  = -lXinerama
