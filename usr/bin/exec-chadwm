@@ -1,27 +1,20 @@
-#!/bin/bash
+#!/bin/sh
 
-# Define paths
-USER_DIR="$HOME/.config/arco-chadwm"
-SYSTEM_DIR="/etc/xdg/arco-chadwm"
-SCRIPT="scripts/run.sh"
+cd ~
 
-# Check if the user directory exists
-if [ -d "$USER_DIR" ]; then
-    echo "Using user configuration directory: $USER_DIR"
-    cd "$USER_DIR" || { echo "Failed to navigate to $USER_DIR"; exit 1; }
-elif [ -d "$SYSTEM_DIR" ]; then
-    echo "User directory not found. Using system configuration directory: $SYSTEM_DIR"
-    cd "$SYSTEM_DIR" || { echo "Failed to navigate to $SYSTEM_DIR"; exit 1; }
+# Check if ~/.config/arco-chadwm exists
+if [ ! -d "$HOME/.config/arco-chadwm" ]; then
+    echo "Directory ~/.config/arco-chadwm does not exist. Copying from /etc/skel/.config/arco-chadwm..."
+
+    # Ensure the target directory exists
+    mkdir -p "$HOME/.config"
+
+    # Copy the contents from /etc/skel/.config/arco-chadwm to ~/.config/arco-chadwm
+    cp -r /etc/skel/.config/arco-chadwm "$HOME/.config/arco-chadwm"
+
 else
-    echo "Error: Neither $USER_DIR nor $SYSTEM_DIR exists."
-    exit 1
+    echo "Directory ~/.config/arco-chadwm already exists. Skipping copy."
 fi
 
-# Run the script if it exists
-if [ -x "$SCRIPT" ]; then
-    echo "Executing $SCRIPT..."
-    ./$SCRIPT
-else
-    echo "Error: $SCRIPT not found or not executable."
-    exit 1
-fi
+# Run the script
+~/.config/arco-chadwm/scripts/run.sh
